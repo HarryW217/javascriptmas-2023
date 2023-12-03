@@ -13,9 +13,7 @@ function calcTotalCandies(children, candy) {
    * is 3*3 = 9. So the function calcTotalCandies should
    * log out 9.
    **/
-  const remainder = candy % children;
-  const totalCandiesEaten = candy - remainder;
-  console.log(totalCandiesEaten);
+  console.log(candy - (candy%children));
 }
 
 calcTotalCandies(3, 10); // expected output: 9
