@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(83, 11, 11);
+}
+
+#wishlist{
+    text-align: center;
+    list-style:none;
+    display: grid;
+}
+
+li{
+    margin: 25px;
+    padding: 25px;
+    font-size: larger;
+    font-style: italic;
+    background-color: rgb(85, 20, 20);
+    color: aliceblue;
+    border-radius: 75%;
+    border-style: dashed;
+    border-color: rgb(97, 82, 63);
+}
