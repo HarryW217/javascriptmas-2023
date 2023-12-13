@@ -9,6 +9,6 @@ const sortedAZ = xmasGifts.sort()
 console.log('A-Z: ', sortedAZ) 
 //["bear 🧸", "games console 🎮 ", "guitar 🎸", "jewellery 💍", "kite 🪁", "laptop 💻", "scarf 🧣", "skates ⛸️"]
 
-const sortedZA = xmasGifts.sort().reverse()
+const sortedZA = xmasGifts.sort((a,b)=>{return b.localeCompare(a)})
 console.log('Z-A: ', sortedZA) 
 //["skates ⛸️", "scarf 🧣", "laptop 💻", "kite 🪁", "jewellery 💍", "guitar 🎸", "games console 🎮 ", "bear 🧸"]
