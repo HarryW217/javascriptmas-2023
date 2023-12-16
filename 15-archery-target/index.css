@@ -1,11 +1,80 @@
 :root {
-    --black: #282828; 
-    --blue: #2892f9; 
-    --red: #fb2f27;
-    --yellow: #fdfe29;
+  --black: #282828;
+  --blue: #2892f9;
+  --red: #fb2f27;
+  --yellow: #fdfe29;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-} 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rings {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring-1{
+    color: var(--black);
+    background-color: var(--black);
+    border-style: solid;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ring-2{
+    color: var(--black);
+    background-color: var(--blue);
+    border-style: solid;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ring-3{
+    color: var(--black);
+    background-color: var(--red);
+    border-style: solid;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bullseye{
+    color: var(--black);
+    background-color: var(--yellow);
+    border-style: solid;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
