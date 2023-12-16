@@ -14,6 +14,10 @@ function duplicateElf() {
   let elfTotal = elfHangoutZone.childElementCount;
   let messageOnPage = document.getElementById("no-more-elves-message");
 
+if(elfTotal>0){
+    btn2.innerHTML="Give the Elves some tea!"
+}
+
   if (elfTotal < 30) {
     let elfClone = elf.cloneNode(true);
     elfHangoutZone.appendChild(elfClone);
