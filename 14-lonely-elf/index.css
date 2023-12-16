@@ -71,6 +71,6 @@ button:hover {
   transform: scale(1.03);
 }
 
-p{
+#no-more-elves-message{
     color: #e0ffbd;
 }
