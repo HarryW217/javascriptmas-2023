@@ -1,20 +1,31 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1>🎅 Naughty List, Nice List 🎁</h1>
-        <div class="container">
-            <div>
-                <h2>Nice List</h2>
-                <ul class="list nice-list" id="nice-list"></ul>
-            </div>
-            <div>
-                <h2>Naughty List</h2>
-                <ul class="list naughty-list" id="naughty-list"></ul>
-            </div>
-        </div>
-        <button id="btn" type="button">Sort</button>
-        <script src="index.pack.js"></script>
-    </body>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>🎅 Naughty List, Nice List 🎁</h1>
+    <div class="container">
+      <div>
+        <h2>Nice List</h2>
+        <ul class="list nice-list" id="nice-list"></ul>
+      </div>
+      <div>
+        <h2>Naughty List</h2>
+        <ul class="list naughty-list" id="naughty-list"></ul>
+      </div>
+    </div>
+    <button id="btn" type="button">Sort</button>
+    <form>
+      <h3>Add someone to a list!</h3>
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" /><br />
+      <label for="list">Are they naughty or nice?</label><br />
+      <select name="lists" id="lists">
+        <option value="Nice">Nice</option>
+        <option value="Naughty">Naughty</option></select
+      ><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="index.pack.js"></script>
+  </body>
 </html>
