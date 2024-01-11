@@ -78,8 +78,8 @@ button:hover {
   padding: 1em 2em;
   border: none;
   font-size: 1rem;
-  background-color: var(--gold);
-  color: var(--dark-green);
+  background-color: var(--dark-green);
+  color: var(--gold);
   font-weight: 700;
   border-radius: 999px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
@@ -90,4 +90,20 @@ button:hover {
 #lists:hover {
   cursor: pointer;
   transform: scale(1.03);
+}
+
+#submit {
+    padding: 1em 2em;
+    border: none;
+    font-size: 1.2rem;
+    background-color: var(--gold);    
+    color: var(--dark-green);
+    font-weight: 700;
+    border-radius: 999px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+#submit:hover {
+    cursor: pointer;
+    transform: scale(1.03)
 }
