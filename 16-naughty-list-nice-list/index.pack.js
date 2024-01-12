@@ -53,9 +53,10 @@ function sort() {
     });
 
     niceList.innerHTML = nice.join("");
-    naughtyList.innerHTML = naughty.join("");
+    naughtyList.innerHTML = naughty.join("");  
+    addNamesToDropdown();
   }
-  addNamesToDropdown();
+
 }
 
 let nameInput = document.getElementById("name");
