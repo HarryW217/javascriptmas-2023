@@ -78,6 +78,26 @@ function addToList() {
   nameSelector.appendChild(nameOption);
 }
 
+const changeListSubmitBtn = document.getElementById("change-list-submit");
+changeListSubmitBtn.addEventListener("click", changeList);
+
+function changeList() {
+  event.preventDefault();
+  const movingSortee = nameSelector.value;
+  
+  function removeChildIfExists(list) {
+    for (let i = 0; i < list.children.length; i++) {
+      const currentSortee = list.children[i]
+      if (currentSortee.textContent === movingSortee) {
+        list.removeChild(currentSortee);
+        break;
+      }
+    }
+  }
+  removeChildIfExists(niceList);
+  removeChildIfExists(naughtyList);
+}
+
 /** Challenge: 
   - Write the JavaScript to sort the people in sorteesArr into the naughty and nice lists, according to whether they have been good or not. Then display the names in the relevant place in the DOM.
 **/
