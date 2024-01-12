@@ -2,6 +2,7 @@ const niceList = document.getElementById("nice-list");
 const naughtyList = document.getElementById("naughty-list");
 const btn = document.getElementById("btn");
 btn.addEventListener("click", sort);
+const nameSelector = document.getElementById("name-selector");
 
 const sorteesArr = [
   {
@@ -22,6 +23,22 @@ const sorteesArr = [
   },
 ];
 
+function addNamesToDropdown() {
+  const niceNames = niceList.querySelectorAll("li");
+  const naughtyNames = naughtyList.querySelectorAll("li");
+  /*Note to self: the above variables contain array-like objects
+  called NodeList objects. You can use certain array methods on these.*/
+  function turnNamesIntoOptions(nameList, parentElement) {
+    nameList.forEach((nameListItem) => {
+      const nameOption = document.createElement("option");
+      nameOption.textContent = nameListItem.textContent;
+      parentElement.appendChild(nameOption);
+    });
+  }
+  turnNamesIntoOptions(niceNames, nameSelector);
+  turnNamesIntoOptions(naughtyNames, nameSelector);
+}
+
 function sort() {
   if (niceList.childElementCount === 0 && naughtyList.childElementCount === 0) {
     let naughty = [];
@@ -38,6 +55,7 @@ function sort() {
     niceList.innerHTML = nice.join("");
     naughtyList.innerHTML = naughty.join("");
   }
+  addNamesToDropdown();
 }
 
 let nameInput = document.getElementById("name");
@@ -55,6 +73,7 @@ function addToList() {
     naughtyList.appendChild(newSortee);
   }
   nameInput.value = "";
+  addNamesToDropdown();
 }
 
 /** Challenge: 
