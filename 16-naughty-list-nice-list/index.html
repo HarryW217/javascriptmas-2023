@@ -15,17 +15,25 @@
       </div>
     </div>
     <button id="btn" type="button">Sort</button>
-    <form>
-      <h3>Add someone to a list!</h3>
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" /><br />
-      <label for="list">Are they naughty or nice?</label><br />
-      <select name="lists" id="lists">
-        <option value="Nice">Nice</option>
-        <option value="Naughty">Naughty</option></select
-      ><br />
-      <input id="submit" type="submit" value="Submit" />
-    </form>
+    <div id="forms">
+        <form>
+          <h3>Add someone to a list!</h3>
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" /><br />
+          <label for="list">Are they naughty or nice?</label><br />
+          <select name="lists" id="lists">
+            <option value="Nice">Nice</option>
+            <option value="Naughty">Naughty</option></select
+          ><br />
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+        <form>
+          <h3>Move someone from one list to another!</h3>
+          <select name="name" id="name-selector">
+          </select><br />
+          <input id="submit" type="submit" value="Move to new list" />
+        </form>
+    </div>
     <script src="index.pack.js"></script>
   </body>
 </html>

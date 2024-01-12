@@ -107,3 +107,15 @@ button:hover {
     cursor: pointer;
     transform: scale(1.03)
 }
+
+#forms {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.form1,
+.form2 {
+  width: 100%; /* Ensure each form takes the full width of its grid cell */
+}
