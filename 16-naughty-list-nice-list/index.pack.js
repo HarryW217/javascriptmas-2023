@@ -23,20 +23,12 @@ const sorteesArr = [
   },
 ];
 
-function addNamesToDropdown() {
-  const niceNames = niceList.querySelectorAll("li");
-  const naughtyNames = naughtyList.querySelectorAll("li");
-  /*Note to self: the above variables contain array-like objects
-  called NodeList objects. You can use certain array methods on these.*/
-  function turnNamesIntoOptions(nameList, parentElement) {
-    nameList.forEach((nameListItem) => {
-      const nameOption = document.createElement("option");
-      nameOption.textContent = nameListItem.textContent;
-      parentElement.appendChild(nameOption);
-    });
-  }
-  turnNamesIntoOptions(niceNames, nameSelector);
-  turnNamesIntoOptions(naughtyNames, nameSelector);
+function addNamesToDropdown(nameList, parentElement) {
+  nameList.forEach((nameListItem) => {
+    const nameOption = document.createElement("option");
+    nameOption.textContent = nameListItem.textContent;
+    parentElement.appendChild(nameOption);
+  });
 }
 
 function sort() {
@@ -53,10 +45,15 @@ function sort() {
     });
 
     niceList.innerHTML = nice.join("");
-    naughtyList.innerHTML = naughty.join("");  
-    addNamesToDropdown();
-  }
+    naughtyList.innerHTML = naughty.join("");
 
+    const niceNames = niceList.querySelectorAll("li");
+    const naughtyNames = naughtyList.querySelectorAll("li");
+    /*Note to self: the above variables contain array-like objects
+  called NodeList objects. You can use certain array methods on these.*/
+    addNamesToDropdown(niceNames, nameSelector);
+    addNamesToDropdown(naughtyNames, nameSelector);
+  }
 }
 
 let nameInput = document.getElementById("name");
@@ -74,7 +71,11 @@ function addToList() {
     naughtyList.appendChild(newSortee);
   }
   nameInput.value = "";
-  addNamesToDropdown();
+
+  //Add the new name to the 'move to new list' dropdown menu:
+  const nameOption = document.createElement("option");
+  nameOption.textContent = newSortee.textContent;
+  nameSelector.appendChild(nameOption);
 }
 
 /** Challenge: 
