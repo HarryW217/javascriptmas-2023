@@ -23,19 +23,21 @@ const sorteesArr = [
 ];
 
 function sort() {
-  let naughty = [];
-  let nice = [];
+  if (niceList.childElementCount === 0 && naughtyList.childElementCount === 0) {
+    let naughty = [];
+    let nice = [];
 
-  sorteesArr.forEach((sortee) => {
-    if (sortee.hasBeenGood === false) {
-      naughty.push(`<li>${sortee.name}</li>`);
-    } else {
-      nice.push(`<li>${sortee.name}</li>`);
-    }
-  });
+    sorteesArr.forEach((sortee) => {
+      if (sortee.hasBeenGood === false) {
+        naughty.push(`<li>${sortee.name}</li>`);
+      } else {
+        nice.push(`<li>${sortee.name}</li>`);
+      }
+    });
 
-  niceList.innerHTML = nice.join("");
-  naughtyList.innerHTML = naughty.join("");
+    niceList.innerHTML = nice.join("");
+    naughtyList.innerHTML = naughty.join("");
+  }
 }
 
 let nameInput = document.getElementById("name");
