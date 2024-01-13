@@ -84,18 +84,30 @@ changeListSubmitBtn.addEventListener("click", changeList);
 function changeList() {
   event.preventDefault();
   const movingSortee = nameSelector.value;
-  
+
   function removeChildIfExists(list) {
     for (let i = 0; i < list.children.length; i++) {
-      const currentSortee = list.children[i]
+      const currentSortee = list.children[i];
       if (currentSortee.textContent === movingSortee) {
         list.removeChild(currentSortee);
-        break;
+        return currentSortee;
       }
     }
+    return null;
   }
-  removeChildIfExists(niceList);
-  removeChildIfExists(naughtyList);
+
+  const naughtySortee = removeChildIfExists(niceList);
+
+  if (naughtySortee) {
+    const newListItem = document.createElement("li");
+    newListItem.textContent = naughtySortee.textContent;
+    naughtyList.appendChild(newListItem);
+  } else {
+    const niceSortee = removeChildIfExists(naughtyList);
+    const newListItem = document.createElement("li");
+    newListItem.textContent = niceSortee.textContent;
+    niceList.appendChild(newListItem);
+  }
 }
 
 /** Challenge: 
